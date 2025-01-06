@@ -3,6 +3,7 @@ import pickle
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 import xgboost as xgb
+import streamlit as st
 
 app = Flask(__name__)
 
@@ -71,4 +72,4 @@ def recommend():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
